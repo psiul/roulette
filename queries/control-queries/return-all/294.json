@@ -1,0 +1,192 @@
+{
+    "export": {
+        "dummy": true, 
+        "linehint": 1, 
+        "schema": [
+            {
+                "origin": {
+                    "relation": "cs", 
+                    "attr": "cs_item_sk"
+                }, 
+                "ord": 0, 
+                "unique": false, 
+                "type": "int", 
+                "attr": "cs_item_sk"
+            }
+        ]
+    }, 
+    "query": {
+        "ordering": [], 
+        "key": [], 
+        "child": {
+            "cond": [
+                {
+                    "right": {
+                        "relation": "hd", 
+                        "attr": "hd_demo_sk"
+                    }, 
+                    "left": {
+                        "relation": "cs", 
+                        "attr": "cs_bill_hdemo_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "w", 
+                        "attr": "w_warehouse_sk"
+                    }, 
+                    "left": {
+                        "relation": "cs", 
+                        "attr": "cs_warehouse_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "i", 
+                        "attr": "i_item_sk"
+                    }, 
+                    "left": {
+                        "relation": "cs", 
+                        "attr": "cs_item_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "cr", 
+                        "attr": "cr_order_number"
+                    }, 
+                    "left": {
+                        "relation": "cs", 
+                        "attr": "cs_order_number"
+                    }
+                }
+            ], 
+            "type": "multijoin", 
+            "children": [
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "cs", 
+                                "attr": "cs_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "122"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "cs", 
+                                "attr": "cs_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "872"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "catalog_sales", 
+                    "name": "cs"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "hd", 
+                                "attr": "hd_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "92"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "hd", 
+                                "attr": "hd_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "492"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "household_demographics", 
+                    "name": "hd"
+                }, 
+                {
+                    "filter": [], 
+                    "type": "scan", 
+                    "relation": "warehouse", 
+                    "name": "w"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "i", 
+                                "attr": "i_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "10"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "i", 
+                                "attr": "i_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "343"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "item", 
+                    "name": "i"
+                }, 
+                {
+                    "filter": [], 
+                    "type": "scan", 
+                    "relation": "catalog_returns", 
+                    "name": "cr"
+                }
+            ]
+        }, 
+        "post_filter": [], 
+        "output": [
+            {
+                "as": {
+                    "relation": "/return-all/294.json", 
+                    "attr": "cs"
+                }, 
+                "attr": {
+                    "relation": "cs", 
+                    "attr": "cs_item_sk"
+                }, 
+                "op": "count"
+            }
+        ], 
+        "type": "aggr"
+    }, 
+    "requires": [], 
+    "name": "/return-all/294.json", 
+    "batch": 0
+}

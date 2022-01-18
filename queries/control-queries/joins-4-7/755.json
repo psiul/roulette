@@ -1,0 +1,176 @@
+{
+    "export": {
+        "dummy": true, 
+        "linehint": 1, 
+        "schema": [
+            {
+                "origin": {
+                    "relation": "ss", 
+                    "attr": "ss_item_sk"
+                }, 
+                "ord": 0, 
+                "unique": false, 
+                "type": "int", 
+                "attr": "ss_item_sk"
+            }
+        ]
+    }, 
+    "query": {
+        "ordering": [], 
+        "key": [], 
+        "child": {
+            "cond": [
+                {
+                    "right": {
+                        "relation": "i", 
+                        "attr": "i_item_sk"
+                    }, 
+                    "left": {
+                        "relation": "ss", 
+                        "attr": "ss_item_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "c", 
+                        "attr": "c_customer_sk"
+                    }, 
+                    "left": {
+                        "relation": "ss", 
+                        "attr": "ss_customer_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "hd", 
+                        "attr": "hd_demo_sk"
+                    }, 
+                    "left": {
+                        "relation": "c", 
+                        "attr": "c_current_hdemo_sk"
+                    }
+                }
+            ], 
+            "type": "multijoin", 
+            "children": [
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "ss", 
+                                "attr": "ss_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "371"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "ss", 
+                                "attr": "ss_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "704"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "store_sales", 
+                    "name": "ss"
+                }, 
+                {
+                    "filter": [], 
+                    "type": "scan", 
+                    "relation": "item", 
+                    "name": "i"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "c", 
+                                "attr": "c_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "231"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "c", 
+                                "attr": "c_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "981"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "customer", 
+                    "name": "c"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "hd", 
+                                "attr": "hd_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "72"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "hd", 
+                                "attr": "hd_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "472"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "household_demographics", 
+                    "name": "hd"
+                }
+            ]
+        }, 
+        "post_filter": [], 
+        "output": [
+            {
+                "as": {
+                    "relation": "/joins-4-7/755.json", 
+                    "attr": "ss"
+                }, 
+                "attr": {
+                    "relation": "ss", 
+                    "attr": "ss_item_sk"
+                }, 
+                "op": "count"
+            }
+        ], 
+        "type": "aggr"
+    }, 
+    "requires": [], 
+    "name": "/joins-4-7/755.json", 
+    "batch": 0
+}

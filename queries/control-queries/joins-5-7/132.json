@@ -1,0 +1,192 @@
+{
+    "export": {
+        "dummy": true, 
+        "linehint": 1, 
+        "schema": [
+            {
+                "origin": {
+                    "relation": "ss", 
+                    "attr": "ss_item_sk"
+                }, 
+                "ord": 0, 
+                "unique": false, 
+                "type": "int", 
+                "attr": "ss_item_sk"
+            }
+        ]
+    }, 
+    "query": {
+        "ordering": [], 
+        "key": [], 
+        "child": {
+            "cond": [
+                {
+                    "right": {
+                        "relation": "d", 
+                        "attr": "d_date_sk"
+                    }, 
+                    "left": {
+                        "relation": "ss", 
+                        "attr": "ss_sold_date_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "i", 
+                        "attr": "i_item_sk"
+                    }, 
+                    "left": {
+                        "relation": "ss", 
+                        "attr": "ss_item_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "c", 
+                        "attr": "c_customer_sk"
+                    }, 
+                    "left": {
+                        "relation": "ss", 
+                        "attr": "ss_customer_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "a", 
+                        "attr": "ca_address_sk"
+                    }, 
+                    "left": {
+                        "relation": "c", 
+                        "attr": "c_current_addr_sk"
+                    }
+                }
+            ], 
+            "type": "multijoin", 
+            "children": [
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "ss", 
+                                "attr": "ss_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "37"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "ss", 
+                                "attr": "ss_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "787"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "store_sales", 
+                    "name": "ss"
+                }, 
+                {
+                    "filter": [], 
+                    "type": "scan", 
+                    "relation": "date_dim", 
+                    "name": "d"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "i", 
+                                "attr": "i_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "647"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "i", 
+                                "attr": "i_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "980"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "item", 
+                    "name": "i"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "c", 
+                                "attr": "c_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "7"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "c", 
+                                "attr": "c_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "407"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "customer", 
+                    "name": "c"
+                }, 
+                {
+                    "filter": [], 
+                    "type": "scan", 
+                    "relation": "customer_address", 
+                    "name": "a"
+                }
+            ]
+        }, 
+        "post_filter": [], 
+        "output": [
+            {
+                "as": {
+                    "relation": "/joins-5-7/132.json", 
+                    "attr": "ss"
+                }, 
+                "attr": {
+                    "relation": "ss", 
+                    "attr": "ss_item_sk"
+                }, 
+                "op": "count"
+            }
+        ], 
+        "type": "aggr"
+    }, 
+    "requires": [], 
+    "name": "/joins-5-7/132.json", 
+    "batch": 0
+}

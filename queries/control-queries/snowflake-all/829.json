@@ -1,0 +1,192 @@
+{
+    "export": {
+        "dummy": true, 
+        "linehint": 1, 
+        "schema": [
+            {
+                "origin": {
+                    "relation": "ws", 
+                    "attr": "ws_item_sk"
+                }, 
+                "ord": 0, 
+                "unique": false, 
+                "type": "int", 
+                "attr": "ws_item_sk"
+            }
+        ]
+    }, 
+    "query": {
+        "ordering": [], 
+        "key": [], 
+        "child": {
+            "cond": [
+                {
+                    "right": {
+                        "relation": "hd", 
+                        "attr": "hd_demo_sk"
+                    }, 
+                    "left": {
+                        "relation": "ws", 
+                        "attr": "ws_bill_hdemo_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "w", 
+                        "attr": "w_warehouse_sk"
+                    }, 
+                    "left": {
+                        "relation": "ws", 
+                        "attr": "ws_warehouse_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "cd", 
+                        "attr": "cd_demo_sk"
+                    }, 
+                    "left": {
+                        "relation": "ws", 
+                        "attr": "ws_bill_cdemo_sk"
+                    }
+                }, 
+                {
+                    "right": {
+                        "relation": "c", 
+                        "attr": "c_customer_sk"
+                    }, 
+                    "left": {
+                        "relation": "ws", 
+                        "attr": "ws_bill_customer_sk"
+                    }
+                }
+            ], 
+            "type": "multijoin", 
+            "children": [
+                {
+                    "filter": [], 
+                    "type": "scan", 
+                    "relation": "web_sales", 
+                    "name": "ws"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "hd", 
+                                "attr": "hd_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "588"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "hd", 
+                                "attr": "hd_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "921"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "household_demographics", 
+                    "name": "hd"
+                }, 
+                {
+                    "filter": [], 
+                    "type": "scan", 
+                    "relation": "warehouse", 
+                    "name": "w"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "cd", 
+                                "attr": "cd_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "357"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "cd", 
+                                "attr": "cd_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "757"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "customer_demographics", 
+                    "name": "cd"
+                }, 
+                {
+                    "filter": [
+                        {
+                            "left": {
+                                "relation": "c", 
+                                "attr": "c_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "82"
+                            }, 
+                            "op": ">="
+                        }, 
+                        {
+                            "left": {
+                                "relation": "c", 
+                                "attr": "c_hash"
+                            }, 
+                            "type": "cmp", 
+                            "right": {
+                                "type": "value", 
+                                "val": "832"
+                            }, 
+                            "op": "<="
+                        }
+                    ], 
+                    "type": "scan", 
+                    "relation": "customer", 
+                    "name": "c"
+                }
+            ]
+        }, 
+        "post_filter": [], 
+        "output": [
+            {
+                "as": {
+                    "relation": "/snowflake-all/829.json", 
+                    "attr": "ws"
+                }, 
+                "attr": {
+                    "relation": "ws", 
+                    "attr": "ws_item_sk"
+                }, 
+                "op": "count"
+            }
+        ], 
+        "type": "aggr"
+    }, 
+    "requires": [], 
+    "name": "/snowflake-all/829.json", 
+    "batch": 0
+}

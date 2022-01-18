@@ -1,0 +1,2427 @@
+{
+	"customer_address" : {
+		"path" : "control-ds/new.customer_address.dat",
+		"linehint" : 250000,
+		"columns" : {
+			"ca_address_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"ca_address_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_street_number" : {
+				"ord" : 2,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_street_name" : {
+				"ord" : 3,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_street_type" : {
+				"ord" : 4,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_suite_number" : {
+				"ord" : 5,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_city" : {
+				"ord" : 6,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_county" : {
+				"ord" : 7,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_state" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false 
+			},
+			"ca_zip" : {
+				"ord" : 9,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_country" : {
+				"ord" : 10,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_gmt_offset" : {
+				"ord" : 11,
+				"type" : "float",
+				"unique" : false
+			},
+			"ca_location_type" : {
+				"ord" : 12,
+				"type" : "string",
+				"unique" : false
+			},
+			"ca_hash" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"customer_demographics" : {
+		"path" : "control-ds/new.customer_demographics.dat",
+		"linehint" : 1920800,
+		"columns" : {
+			"cd_demo_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"cd_gender" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"cd_marital_status" : {
+				"ord" : 2,
+				"type" : "string",
+				"unique" : false
+			},
+			"cd_education_status" : {
+				"ord" : 3,
+				"type" : "string",
+				"unique" : false
+			},
+			"cd_purchase_estimate" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"cd_credit_rating" : {
+				"ord" : 5,
+				"type" : "string",
+				"unique" : false
+			},
+			"cd_dep_count" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"cd_dep_employed_count" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"cd_dep_college_count" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false
+			},
+			"cd_hash" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"date_dim" : {
+		"path" : "control-ds/new.date_dim.dat",
+		"linehint" : 73049,
+		"columns" : {
+			"d_date_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"d_date_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_date" : {
+				"ord" : 2,
+				"type" : "date",
+				"unique" : false
+			},
+			"d_month_seq" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_week_seq" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_quarter_seq" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_year" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_dow" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_moy" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_dom" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_qoy" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_fy_year" : {
+				"ord" : 11,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_fy_quarter_seq" : {
+				"ord" : 12,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_fy_week_seq" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_day_name" : {
+				"ord" : 14,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_quarter_name" : {
+				"ord" : 15,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_holiday" : {
+				"ord" : 16,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_weekend" : {
+				"ord" : 17,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_following_holiday" : {
+				"ord" : 18,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_first_dom" : {
+				"ord" : 19,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_last_dom" : {
+				"ord" : 20,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_same_day_ly" : {
+				"ord" : 21,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_same_day_lq" : {
+				"ord" : 22,
+				"type" : "int",
+				"unique" : false
+			},
+			"d_current_day" : {
+				"ord" : 23,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_current_week" : {
+				"ord" : 24,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_current_month" : {
+				"ord" : 25,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_current_quarter" : {
+				"ord" : 26,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_current_year" : {
+				"ord" : 27,
+				"type" : "string",
+				"unique" : false
+			},
+			"d_hash" : {
+				"ord" : 28,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"warehouse" : {
+		"path" : "control-ds/new.warehouse.dat",
+		"linehint" : 10,
+		"columns" : {
+			"w_warehouse_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"w_warehouse_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_warehouse_name" : {
+				"ord" : 2,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_warehouse_sq_ft" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"w_street_number" : {
+				"ord" : 4,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_street_name" : {
+				"ord" : 5,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_street_type" : {
+				"ord" : 6,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_suite_number" : {
+				"ord" : 7,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_city" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_county" : {
+				"ord" : 9,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_state" : {
+				"ord" : 10,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_zip" : {
+				"ord" : 11,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_country" : {
+				"ord" : 12,
+				"type" : "string",
+				"unique" : false
+			},
+			"w_gmt_offset" : {
+				"ord" : 13,
+				"type" : "float",
+				"unique" : false
+			},
+			"w_hash" : {
+				"ord" : 14,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"ship_mode" : {
+		"path" : "control-ds/new.ship_mode.dat",
+		"linehint" : 20,
+		"columns" : {
+			"sm_ship_mode_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"sm_ship_mode_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"sm_type" : {
+				"ord" : 2,
+				"type" : "string",
+				"unique" : false
+			},
+			"sm_code" : {
+				"ord" : 3,
+				"type" : "string",
+				"unique" : false
+			},
+			"sm_carrier" : {
+				"ord" : 4,
+				"type" : "string",
+				"unique" : false
+			},
+			"sm_contract" : {
+				"ord" : 5,
+				"type" : "string",
+				"unique" : false
+			},
+			"sm_hash" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"time_dim" : {
+		"path" : "control-ds/new.time_dim.dat",
+		"linehint" : 86400,
+		"columns" : {
+			"t_time_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"t_time_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"t_time" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false
+			},
+			"t_hour" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"t_minute" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"t_second" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"t_am_pm" : {
+				"ord" : 6,
+				"type" : "string",
+				"unique" : false
+			},
+			"t_shift" : {
+				"ord" : 7,
+				"type" : "string",
+				"unique" : false
+			},
+			"t_sub_shift" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"t_meal_time" : {
+				"ord" : 9,
+				"type" : "string",
+				"unique" : false
+			},
+			"t_hash" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"reason" : {
+		"path" : "control-ds/new.reason.dat",
+		"linehint" : 45,
+		"columns" : {
+			"r_reason_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"r_reason_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"r_reason_desc" : {
+				"ord" : 2,
+				"type" : "string",
+				"unique" : false
+			},
+			"r_hash" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"income_band" : {
+		"path" : "control-ds/new.income_band.dat",
+		"linehint" : 20,
+		"columns" : {
+			"ib_income_band_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"ib_lower_bound" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false
+			},
+			"ib_upper_bound" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false
+			},
+			"ib_hash" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"item" : {
+		"path" : "control-ds/new.item.dat",
+		"linehint" : 102000,
+		"columns" : {
+			"i_item_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"i_item_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_rec_start_date" : {
+				"ord" : 2,
+				"type" : "date",
+				"unique" : false
+			},
+			"i_rec_end_date" : {
+				"ord" : 3,
+				"type" : "date",
+				"unique" : false
+			},
+			"i_item_desc" : {
+				"ord" : 4,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_current_price" : {
+				"ord" : 5,
+				"type" : "float",
+				"unique" : false
+			},
+			"i_wholesale_cost" : {
+				"ord" : 6,
+				"type" : "float",
+				"unique" : false
+			},
+			"i_brand_id" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"i_brand" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_class_id" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			},
+			"i_class" : {
+				"ord" : 10,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_category_id" : {
+				"ord" : 11,
+				"type" : "int",
+				"unique" : false
+			},
+			"i_category" : {
+				"ord" : 12,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_manufact_id" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false
+			},
+			"i_manufact" : {
+				"ord" : 14,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_size" : {
+				"ord" : 15,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_formulation" : {
+				"ord" : 16,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_color" : {
+				"ord" : 17,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_units" : {
+				"ord" : 18,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_container" : {
+				"ord" : 19,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_manager_id" : {
+				"ord" : 20,
+				"type" : "int",
+				"unique" : false
+			},
+			"i_product_name" : {
+				"ord" : 21,
+				"type" : "string",
+				"unique" : false
+			},
+			"i_hash" : {
+				"ord" : 22,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"store" : {
+		"path" : "control-ds/new.store.dat",
+		"linehint" : 102,
+		"columns" : {
+			"s_store_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"s_store_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_rec_start_date" : {
+				"ord" : 2,
+				"type" : "date",
+				"unique" : false
+			},
+			"s_rec_end_date" : {
+				"ord" : 3,
+				"type" : "date",
+				"unique" : false
+			},
+			"s_closed_date_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"s_store_name" : {
+				"ord" : 5,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_number_employees" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"s_floor_space" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"s_hours" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_manager" : {
+				"ord" : 9,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_market_id" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			},
+			"s_geography_class" : {
+				"ord" : 11,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_market_desc" : {
+				"ord" : 12,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_market_manager" : {
+				"ord" : 13,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_division_id" : {
+				"ord" : 14,
+				"type" : "int",
+				"unique" : false
+			},
+			"s_division_name" : {
+				"ord" : 15,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_company_id" : {
+				"ord" : 16,
+				"type" : "int",
+				"unique" : false
+			},
+			"s_company_name" : {
+				"ord" : 17,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_street_number" : {
+				"ord" : 18,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_street_name" : {
+				"ord" : 19,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_street_type" : {
+				"ord" : 20,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_suite_number" : {
+				"ord" : 21,
+				"type" : "int",
+				"unique" : false
+			},
+			"s_city" : {
+				"ord" : 22,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_county" : {
+				"ord" : 23,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_state" : {
+				"ord" : 24,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_zip" : {
+				"ord" : 25,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_country" : {
+				"ord" : 26,
+				"type" : "string",
+				"unique" : false
+			},
+			"s_gmt_offset" : {
+				"ord" : 27,
+				"type" : "float",
+				"unique" : false
+			},
+			"s_tax_precentage" : {
+				"ord" : 28,
+				"type" : "float",
+				"unique" : false
+			},
+			"s_hash" : {
+				"ord" : 29,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"call_center" : {
+		"path" : "control-ds/new.call_center.dat",
+		"linehint" : 24,
+		"columns" : {
+			"cc_call_center_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"cc_call_center_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_rec_start_date" : {
+				"ord" : 2,
+				"type" : "date",
+				"unique" : false
+			},
+			"cc_rec_end_date" : {
+				"ord" : 3,
+				"type" : "date",
+				"unique" : false
+			},
+			"cc_closed_date_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"cc_open_date_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"cc_name" : {
+				"ord" : 6,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_class" : {
+				"ord" : 7,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_employees" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false
+			},
+			"cc_sq_ft" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			},
+			"cc_hours" : {
+				"ord" : 10,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_manager" : {
+				"ord" : 11,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_mkt_id" : {
+				"ord" : 12,
+				"type" : "int",
+				"unique" : false
+			},
+			"cc_mkt_class" : {
+				"ord" : 13,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_mkt_desc" : {
+				"ord" : 14,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_market_manager" : {
+				"ord" : 15,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_division" : {
+				"ord" : 16,
+				"type" : "int",
+				"unique" : false
+			},
+			"cc_division_name" : {
+				"ord" : 17,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_company" : {
+				"ord" : 18,
+				"type" : "int",
+				"unique" : false
+			},
+			"cc_company_name" : {
+				"ord" : 19,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_street_number" : {
+				"ord" : 20,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_street_name" : {
+				"ord" : 21,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_street_type" : {
+				"ord" : 22,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_suite_number" : {
+				"ord" : 23,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_city" : {
+				"ord" : 24,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_county" : {
+				"ord" : 25,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_state" : {
+				"ord" : 26,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_zip" : {
+				"ord" : 27,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_country" : {
+				"ord" : 28,
+				"type" : "string",
+				"unique" : false
+			},
+			"cc_gmt_offset" : {
+				"ord" : 29,
+				"type" : "float",
+				"unique" : false
+			},
+			"cc_tax_percentage" : {
+				"ord" : 30,
+				"type" : "float",
+				"unique" : false
+			},
+			"cc_hash" : {
+				"ord" : 31,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"customer" : {
+		"path" : "control-ds/new.customer.dat",
+		"linehint" : 500000,
+		"columns" : {
+			"c_customer_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"c_customer_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_current_cdemo_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false
+			},
+			"c_current_hdemo_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"c_current_addr_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"c_first_shipto_date_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"c_first_sales_date_sk" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"c_salutation" : {
+				"ord" : 7,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_first_name" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_last_name" : {
+				"ord" : 9,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_preferred_cust_flag" : {
+				"ord" : 10,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_birth_day" : {
+				"ord" : 11,
+				"type" : "int",
+				"unique" : false
+			},
+			"c_birth_month" : {
+				"ord" : 12,
+				"type" : "int",
+				"unique" : false
+			},
+			"c_birth_year" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false
+			},
+			"c_birth_country" : {
+				"ord" : 14,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_login" : {
+				"ord" : 15,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_email_address" : {
+				"ord" : 16,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_last_review_date" : {
+				"ord" : 17,
+				"type" : "string",
+				"unique" : false
+			},
+			"c_hash" : {
+				"ord" : 18,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"web_site" : {
+		"path" : "control-ds/new.web_site.dat",
+		"linehint" : 42,
+		"columns" : {
+			"web_site_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"web_site_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_rec_start_date" : {
+				"ord" : 2,
+				"type" : "date",
+				"unique" : false
+			},
+			"web_rec_end_date" : {
+				"ord" : 3,
+				"type" : "date",
+				"unique" : false
+			},
+			"web_name" : {
+				"ord" : 4,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_open_date_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"web_close_date_sk" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"web_class" : {
+				"ord" : 7,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_manager" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_mkt_id" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			},
+			"web_mkt_class" : {
+				"ord" : 10,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_mkt_desc" : {
+				"ord" : 11,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_market_manager" : {
+				"ord" : 12,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_company_id" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false
+			},
+			"web_company_name" : {
+				"ord" : 14,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_street_number" : {
+				"ord" : 15,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_street_name" : {
+				"ord" : 16,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_street_type" : {
+				"ord" : 17,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_suite_number" : {
+				"ord" : 18,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_city" : {
+				"ord" : 19,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_county" : {
+				"ord" : 20,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_state" : {
+				"ord" : 21,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_zip" : {
+				"ord" : 22,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_country" : {
+				"ord" : 23,
+				"type" : "string",
+				"unique" : false
+			},
+			"web_gmt_offset" : {
+				"ord" : 24,
+				"type" : "float",
+				"unique" : false
+			},
+			"web_tax_percentage" : {
+				"ord" : 25,
+				"type" : "float",
+				"unique" : false
+			},
+			"web_hash" : {
+				"ord" : 26,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"store_returns" : {
+		"path" : "control-ds/new.store_returns.dat",
+		"linehint" : 2875432,
+		"columns" : {
+			"sr_returned_date_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : false,
+				"block" : true 
+			},
+			"sr_return_time_sk" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_item_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_customer_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false,
+				"block" : true 
+			},
+			"sr_cdemo_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_hdemo_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_addr_sk" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_store_sk" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_reason_sk" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_ticket_number" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"sr_return_quantity" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_return_amt" : {
+				"ord" : 11,
+				"type" : "float",
+				"unique" : false
+			},
+			"sr_return_tax" : {
+				"ord" : 12,
+				"type" : "float",
+				"unique" : false
+			},
+			"sr_return_amt_inc_tax" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false
+			},
+			"sr_fee" : {
+				"ord" : 14,
+				"type" : "float",
+				"unique" : false
+			},
+			"sr_return_ship_cost" : {
+				"ord" : 15,
+				"type" : "float",
+				"unique" : false
+			},
+			"sr_refunded_cash" : {
+				"ord" : 16,
+				"type" : "float",
+				"unique" : false
+			},
+			"sr_reversed_charge" : {
+				"ord" : 17,
+				"type" : "float",
+				"unique" : false
+			},
+			"sr_store_credit" : {
+				"ord" : 18,
+				"type" : "float",
+				"unique" : false
+			},
+			"sr_net_loss" : {
+				"ord" : 19,
+				"type" : "float",
+				"unique" : false
+			},
+			"sr_hash" : {
+				"ord" : 20,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"household_demographics" : {
+		"path" : "control-ds/new.household_demographics.dat",
+		"linehint" : 7200,
+		"columns" : {
+			"hd_demo_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"hd_income_band_sk" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false
+			},
+			"hd_buy_potential" : {
+				"ord" : 2,
+				"type" : "string",
+				"unique" : false
+			},
+			"hd_dep_count" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"hd_vehicle_count" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"hd_hash" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"web_page" : {
+		"path" : "control-ds/new.web_page.dat",
+		"linehint" : 200,
+		"columns" : {
+			"wp_web_page_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"wp_web_page_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"wp_rec_start_date" : {
+				"ord" : 2,
+				"type" : "date",
+				"unique" : false
+			},
+			"wp_rec_end_date" : {
+				"ord" : 3,
+				"type" : "date",
+				"unique" : false
+			},
+			"wp_creation_date_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"wp_access_date_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"wp_autogen_flag" : {
+				"ord" : 6,
+				"type" : "string",
+				"unique" : false
+			},
+			"wp_customer_sk" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"wp_url" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"wp_type" : {
+				"ord" : 9,
+				"type" : "string",
+				"unique" : false
+			},
+			"wp_char_count" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			},
+			"wp_link_count" : {
+				"ord" : 11,
+				"type" : "int",
+				"unique" : false
+			},
+			"wp_image_count" : {
+				"ord" : 12,
+				"type" : "int",
+				"unique" : false
+			},
+			"wp_max_ad_count" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false
+			},
+			"wp_hash" : {
+				"ord" : 14,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"promotion" : {
+		"path" : "control-ds/new.promotion.dat",
+		"linehint" : 500,
+		"columns" : {
+			"p_promo_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"p_promo_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_start_date_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false
+			},
+			"p_end_date_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"p_item_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"p_cost" : {
+				"ord" : 5,
+				"type" : "float",
+				"unique" : false
+			},
+			"p_response_target" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"p_promo_name" : {
+				"ord" : 7,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_dmail" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_email" : {
+				"ord" : 9,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_catalog" : {
+				"ord" : 10,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_tv" : {
+				"ord" : 11,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_radio" : {
+				"ord" : 12,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_press" : {
+				"ord" : 13,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_event" : {
+				"ord" : 14,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_demo" : {
+				"ord" : 15,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_channel_details" : {
+				"ord" : 16,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_purpose" : {
+				"ord" : 17,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_discount_active" : {
+				"ord" : 18,
+				"type" : "string",
+				"unique" : false
+			},
+			"p_hash" : {
+				"ord" : 19,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"catalog_page" : {
+		"path" : "control-ds/new.catalog_page.dat",
+		"linehint" : 12000,
+		"columns" : {
+			"cp_catalog_page_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"cp_catalog_page_id" : {
+				"ord" : 1,
+				"type" : "string",
+				"unique" : false
+			},
+			"cp_start_date_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false
+			},
+			"cp_end_date_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"cp_department" : {
+				"ord" : 4,
+				"type" : "string",
+				"unique" : false
+			},
+			"cp_catalog_number" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"cp_catalog_page_number" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"cp_description" : {
+				"ord" : 7,
+				"type" : "string",
+				"unique" : false
+			},
+			"cp_type" : {
+				"ord" : 8,
+				"type" : "string",
+				"unique" : false
+			},
+			"cp_hash" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"inventory" : {
+		"path" : "control-ds/new.inventory.dat",
+		"linehint" : 133110000,
+		"columns" : {
+			"inv_date_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true,
+				"block" : true
+			},
+			"inv_item_sk" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"inv_warehouse_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"inv_quantity_on_hand" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"inv_hash" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"catalog_returns" : {
+		"path" : "control-ds/new.catalog_returns.dat",
+		"linehint" : 1439749,
+		"columns" : {
+			"cr_returned_date_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_returned_time_sk" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_item_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_refunded_customer_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_refunded_cdemo_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_refunded_hdemo_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_refunded_addr_sk" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_returning_customer_sk" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"cr_returning_cdemo_sk" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_returning_hdemo_sk" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_returning_addr_sk" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_call_center_sk" : {
+				"ord" : 11,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"cr_catalog_page_sk" : {
+				"ord" : 12,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_ship_mode_sk" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_warehouse_sk" : {
+				"ord" : 14,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_reason_sk" : {
+				"ord" : 15,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_order_number" : {
+				"ord" : 16,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"cr_return_quantity" : {
+				"ord" : 17,
+				"type" : "int",
+				"unique" : false
+			},
+			"cr_return_amount" : {
+				"ord" : 18,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_return_tax" : {
+				"ord" : 19,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_return_amt_inc_tax" : {
+				"ord" : 20,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_fee" : {
+				"ord" : 21,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_return_ship_cost" : {
+				"ord" : 22,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_refunded_cash" : {
+				"ord" : 23,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_reversed_charge" : {
+				"ord" : 24,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_store_credit" : {
+				"ord" : 25,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_net_loss" : {
+				"ord" : 26,
+				"type" : "float",
+				"unique" : false
+			},
+			"cr_hash" : {
+				"ord" : 27,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"web_returns" : {
+		"path" : "control-ds/new.web_returns.dat",
+		"linehint" : 719217,
+		"columns" : {
+			"wr_returned_date_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_returned_time_sk" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_item_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_refunded_customer_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_refunded_cdemo_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_refunded_hdemo_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_refunded_addr_sk" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_returning_customer_sk" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_returning_cdemo_sk" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_returning_hdemo_sk" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_returning_addr_sk" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_web_page_sk" : {
+				"ord" : 11,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_reason_sk" : {
+				"ord" : 12,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_order_number" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"wr_return_quantity" : {
+				"ord" : 14,
+				"type" : "int",
+				"unique" : false
+			},
+			"wr_return_amt" : {
+				"ord" : 15,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_return_tax" : {
+				"ord" : 16,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_return_amt_inc_tax" : {
+				"ord" : 17,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_fee" : {
+				"ord" : 18,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_return_ship_cost" : {
+				"ord" : 19,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_refunded_cash" : {
+				"ord" : 20,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_reversed_charge" : {
+				"ord" : 21,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_account_credit" : {
+				"ord" : 22,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_net_loss" : {
+				"ord" : 23,
+				"type" : "float",
+				"unique" : false
+			},
+			"wr_hash" : {
+				"ord" : 24,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"web_sales" : {
+		"path" : "control-ds/new.web_sales.dat",
+		"linehint" : 7197566,
+		"columns" : {
+			"ws_sold_date_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"ws_sold_time_sk" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ws_ship_date_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"ws_item_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_bill_customer_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_bill_cdemo_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_bill_hdemo_sk" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_bill_addr_sk" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_ship_customer_sk" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_ship_cdemo_sk" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_ship_hdemo_sk" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ws_ship_addr_sk" : {
+				"ord" : 11,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_web_page_sk" : {
+				"ord" : 12,
+				"type" : "int",
+				"unique" : false,
+				"block" : false,
+				"block" : true
+			},
+			"ws_web_site_sk" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false,
+				"block" : false,
+				"block" : true
+			},
+			"ws_ship_mode_sk" : {
+				"ord" : 14,
+				"type" : "int",
+				"unique" : false,
+				"block" : false,
+				"block" : true
+			},
+			"ws_warehouse_sk" : {
+				"ord" : 15,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ws_promo_sk" : {
+				"ord" : 16,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_order_number" : {
+				"ord" : 17,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"ws_quantity" : {
+				"ord" : 18,
+				"type" : "int",
+				"unique" : false
+			},
+			"ws_wholesale_cost" : {
+				"ord" : 19,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_list_price" : {
+				"ord" : 20,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_sales_price" : {
+				"ord" : 21,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_ext_discount_amt" : {
+				"ord" : 22,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_ext_sales_price" : {
+				"ord" : 23,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_ext_wholesale_cost" : {
+				"ord" : 24,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_ext_list_price" : {
+				"ord" : 25,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_ext_tax" : {
+				"ord" : 26,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_coupon_amt" : {
+				"ord" : 27,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_ext_ship_cost" : {
+				"ord" : 28,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_net_paid" : {
+				"ord" : 29,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_net_paid_inc_tax" : {
+				"ord" : 30,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_net_paid_inc_ship" : {
+				"ord" : 31,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_net_paid_inc_ship_tax" : {
+				"ord" : 32,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_net_profit" : {
+				"ord" : 33,
+				"type" : "float",
+				"unique" : false
+			},
+			"ws_hash" : {
+				"ord" : 34,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"catalog_sales" : {
+		"path" : "control-ds/new.catalog_sales.dat",
+		"linehint" : 14401261,
+		"columns" : {
+			"cs_sold_date_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : true
+			},
+			"cs_sold_time_sk" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_ship_date_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : true
+			},
+			"cs_bill_customer_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_bill_cdemo_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_bill_hdemo_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_bill_addr_sk" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_ship_customer_sk" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_ship_cdemo_sk" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_ship_hdemo_sk" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_ship_addr_sk" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_call_center_sk" : {
+				"ord" : 11,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"cs_catalog_page_sk" : {
+				"ord" : 12,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_ship_mode_sk" : {
+				"ord" : 13,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"cs_warehouse_sk" : {
+				"ord" : 14,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"cs_item_sk" : {
+				"ord" : 15,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_promo_sk" : {
+				"ord" : 16,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_order_number" : {
+				"ord" : 17,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"cs_quantity" : {
+				"ord" : 18,
+				"type" : "int",
+				"unique" : false
+			},
+			"cs_wholesale_cost" : {
+				"ord" : 19,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_list_price" : {
+				"ord" : 20,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_sales_price" : {
+				"ord" : 21,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_ext_discount_amt" : {
+				"ord" : 22,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_ext_sales_price" : {
+				"ord" : 23,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_ext_wholesale_cost" : {
+				"ord" : 24,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_ext_list_price" : {
+				"ord" : 25,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_ext_tax" : {
+				"ord" : 26,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_coupon_amt" : {
+				"ord" : 27,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_ext_ship_cost" : {
+				"ord" : 28,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_net_paid" : {
+				"ord" : 29,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_net_paid_inc_tax" : {
+				"ord" : 30,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_net_paid_inc_ship" : {
+				"ord" : 31,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_net_paid_inc_ship_tax" : {
+				"ord" : 32,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_net_profit" : {
+				"ord" : 33,
+				"type" : "float",
+				"unique" : false
+			},
+			"cs_hash" : {
+				"ord" : 34,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	},
+	"store_sales" : {
+		"path" : "control-ds/new.store_sales.dat",
+		"linehint" : 28800991,
+		"columns" : {
+			"ss_sold_date_sk" : {
+				"ord" : 0,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"ss_sold_time_sk" : {
+				"ord" : 1,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ss_item_sk" : {
+				"ord" : 2,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"ss_customer_sk" : {
+				"ord" : 3,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ss_cdemo_sk" : {
+				"ord" : 4,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ss_hdemo_sk" : {
+				"ord" : 5,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ss_addr_sk" : {
+				"ord" : 6,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ss_store_sk" : {
+				"ord" : 7,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"ss_promo_sk" : {
+				"ord" : 8,
+				"type" : "int",
+				"unique" : false,
+				"block" : false
+			},
+			"ss_ticket_number" : {
+				"ord" : 9,
+				"type" : "int",
+				"unique" : false,
+				"block" : true
+			},
+			"ss_quantity" : {
+				"ord" : 10,
+				"type" : "int",
+				"unique" : false
+			},
+			"ss_wholesale_cost" : {
+				"ord" : 11,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_list_price" : {
+				"ord" : 12,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_sales_price" : {
+				"ord" : 13,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_ext_discount_amt" : {
+				"ord" : 14,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_ext_sales_price" : {
+				"ord" : 15,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_ext_wholesale_cost" : {
+				"ord" : 16,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_ext_list_price" : {
+				"ord" : 17,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_ext_tax" : {
+				"ord" : 18,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_coupon_amt" : {
+				"ord" : 19,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_net_paid" : {
+				"ord" : 20,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_net_paid_inc_tax" : {
+				"ord" : 21,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_net_profit" : {
+				"ord" : 22,
+				"type" : "float",
+				"unique" : false
+			},
+			"ss_hash" : {
+				"ord" : 23,
+				"type" : "int",
+				"unique" : false
+			}
+		}
+	}
+}

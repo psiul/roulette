@@ -1,0 +1,4 @@
+select count(ws.ws_item_sk)
+from web_sales ws,customer c,customer_address a,ship_mode sm,warehouse w
+where ws.ws_bill_customer_sk = c.c_customer_sk and c.c_current_addr_sk = a.ca_address_sk and ws.ws_ship_mode_sk = sm.sm_ship_mode_sk and ws.ws_warehouse_sk = w.w_warehouse_sk and ws.ws_hash >= 501 and ws.ws_hash <= 834 and a.ca_hash >= 189 and a.ca_hash <= 939 and sm.sm_hash >= 154 and sm.sm_hash <= 554
+;

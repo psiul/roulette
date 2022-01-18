@@ -1,0 +1,4 @@
+select count(ss.ss_item_sk)
+from store_sales ss,store_returns sr,customer_demographics cd,item i,household_demographics hd
+where ss.ss_ticket_number = sr.sr_ticket_number and sr.sr_cdemo_sk = cd.cd_demo_sk and ss.ss_item_sk = i.i_item_sk and sr.sr_hdemo_sk = hd.hd_demo_sk and ss.ss_hash >= 633 and ss.ss_hash <= 966 and i.i_hash >= 48 and i.i_hash <= 448 and hd.hd_hash >= 15 and hd.hd_hash <= 765
+;
